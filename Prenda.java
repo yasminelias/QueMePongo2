@@ -1,0 +1,34 @@
+package com.company;
+
+import java.util.List;
+
+import static java.util.Objects.requireNonNull;
+
+
+public class Prenda {
+    TipoPrenda tipo;
+    Material material;
+    Trama trama;
+    Color color;
+    Color colorSecundario;
+    List<Prenda> prendas;
+
+
+    public Prenda(TipoPrenda tipo, Material material,Trama trama ,Color color, Color colorSecundario) {
+        this.tipo = requireNonNull(tipo,"el tipo de prenda es obligatorio");
+        this.material = requireNonNull(material,"el material es obligatorio");
+            if(trama.equals(null)) {
+            this.trama = Trama.LISA;}
+            else{
+                this.trama = trama;
+        }
+        this.color = requireNonNull(color,"el color es obligatorio");
+        this.colorSecundario = colorSecundario;
+    }
+
+
+    public void agregarPrenda(Prenda prenda){
+        prendas.add(prenda);
+    }
+
+}
