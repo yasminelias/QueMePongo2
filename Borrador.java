@@ -5,17 +5,23 @@ import java.util.List;
 public class Borrador {
   TipoPrenda tipoPrenda;
   Material material;
-  Trama trama;
+  Trama trama = Trama.LISA;
   Color color;
   Color colorSecundario;
   List<Prenda> prendas;
   void cargarTipoPrenda(TipoPrenda tipo){
     this.tipoPrenda = tipo;
   }
-  void cargarPrenda(Material material,Trama trama ,Color color, Color colorSecundario){
+  void cagarMaterial(Material material){
     this.material = material;
+  }
+  void cargarTrama(Trama trama){
     this.trama = trama;
-    this.color=color;
+  }
+  void cargarColorPrincipal(Color color){
+    this.color = color;
+  }
+  void cargarColorSecundario(Color colorSecundario){
     this.colorSecundario = colorSecundario;
   }
 
